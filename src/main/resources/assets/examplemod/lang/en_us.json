@@ -1,0 +1,11 @@
+{
+  "item.examplemod.obsidianite_ingot": "Obsidianite Ingot",
+  "item.examplemod.obsidianite_scrap": "Obsidianite Scrap",
+  "item.examplemod.obsidianite_sword": "Obsidianite Sword",
+  "item.examplemod.obsidianite_pickaxe": "Obsidianite Pickaxe",
+  "item.examplemod.obsidianite_shovel": "Obsidianite Shovel",
+  "item.examplemod.obsidianite_axe": "Obsidianite Axe",
+  "item.examplemod.obsidianite_hoe": "Obsidianite Hoe",
+  "block.examplemod.obsidianite_block": "Obsidianite Block",
+  "itemGroup.exampleTab": "Example Tab"
+}
