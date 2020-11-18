@@ -15,3 +15,5 @@ cache:
 matrix:
   include:
     - dist: bionic
+jdk:
+  - openjdk8
