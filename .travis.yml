@@ -1,5 +1,6 @@
 language: java
 script: 
+  - chmod +x gradlew
   - gradlew assesmble
   - gradlew check
   - gradlew build
