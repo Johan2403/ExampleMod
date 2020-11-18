@@ -10,4 +10,7 @@ cache:
   directories:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
-dist: bionic
+matrix:
+  include:
+    - dist: bionic
+    - dist: xenial
