@@ -13,4 +13,3 @@ cache:
 matrix:
   include:
     - dist: bionic
-    - dist: xenial
