@@ -9,4 +9,3 @@ This Mod is Licensed under the MIT License.
 TODO
 ---
 1. Add javadoc to the code.
-2. Create a wiki elaborating steps on how to create stuff with examples from code.
