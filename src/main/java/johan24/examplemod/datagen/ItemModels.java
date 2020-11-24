@@ -11,12 +11,21 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 
 import java.util.function.Supplier;
 
+/**
+ * This is the class which generates Item Models for
+ * the Mod Example Mod.
+ *
+ * @author Johan24
+ */
 public class ItemModels extends ItemModelProvider {
 
     public ItemModels(DataGenerator gen, ExistingFileHelper exFileHelper) {
         super(gen, ExampleMod.MODID, exFileHelper);
     }
 
+    /**
+     * Registers the Item Models.
+     */
     @Override
     protected void registerModels() {
         simpleItem(ModItems.OBSIDIANITE_INGOT);
@@ -30,6 +39,11 @@ public class ItemModels extends ItemModelProvider {
         toolItem(ModItems.OBSIDIANITE_HOE);
     }
 
+    /**
+     * Creates a simple item model with a parent minecraft:item/generated.
+     * Use it for non-tool items.
+     * @param itemSupplier
+     */
     public void simpleItem(Supplier<? extends Item> itemSupplier) {
         ResourceLocation location = itemSupplier.get().getRegistryName();
         this.getBuilder(location.getPath())
@@ -37,6 +51,11 @@ public class ItemModels extends ItemModelProvider {
                 .texture("layer0", new ResourceLocation(location.getNamespace(), ITEM_FOLDER + "/" + location.getPath()));
     }
 
+    /**
+     * Creates a simple tool item model with a parent minecraft:item/handheld.
+     * Use it for tool items.
+     * @param itemSupplier
+     */
     public void toolItem(Supplier<? extends Item> itemSupplier) {
         ResourceLocation location = itemSupplier.get().getRegistryName();
         this.getBuilder(location.getPath())

@@ -6,12 +6,22 @@ import johan24.examplemod.init.ModItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
 
+/**
+ * This is the class which generates Language file which converts
+ * translation keys into meaningful names for the mod Example Mod.
+ *
+ * @author Johan24
+ */
 public class Localization extends LanguageProvider {
 
     public Localization(DataGenerator gen, String locale) {
         super(gen, ExampleMod.MODID, locale);
     }
 
+    /**
+     * Adds the translations for Items, Blocks, ItemGroups etc. Translates it into
+     * en_us locale.
+     */
     @Override
     protected void addTranslations() {
         // Items
@@ -24,7 +34,7 @@ public class Localization extends LanguageProvider {
         addItem(ModItems.OBSIDIANITE_HOE, "Obsidianite Hoe");
 
         // Blocks
-        addBlock(ModBlocks.OBSIDIANITE_BLOCK, "Obsidianite Block");
+        addBlock(ModBlocks.OBSIDIANITE_BLOCK, "Block of Obsidianite");
 
         // ItemGroup
         add("itemGroup." + ExampleMod.TAB.getPath(), "Example Tab");

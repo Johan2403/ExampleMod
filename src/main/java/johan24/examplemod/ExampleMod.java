@@ -23,13 +23,24 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+/**
+ * The main class of the mod Example Mod.
+ * @author Johan24
+ */
 @Mod(ExampleMod.MODID)
 public class ExampleMod {
 
+    /**
+     * The modid of the Mod Example Mod. Unique to every mod.
+     */
     public static final String MODID = "examplemod";
     public static final Logger LOGGER = LogManager.getLogger(ExampleMod.MODID);
     public static final ISidedReference SIDED_SYSTEM = DistExecutor.safeRunForDist(() -> ClientReference::new, () -> DedicatedServerReference::new);
 
+    /**
+     * The main constructor of the mod Example Mod.
+     * This is where registration of Blocks, Items etc. take place.
+     */
     public ExampleMod() {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus(), forgeEventBus = MinecraftForge.EVENT_BUS;
         SIDED_SYSTEM.setup(modEventBus, forgeEventBus);
@@ -40,8 +51,19 @@ public class ExampleMod {
         ModItems.ITEMS.register(modEventBus);
     }
 
+    /**
+     * Any code inside this method will be executed during
+     * the common setup.
+     * @param event
+     */
     private void setup(final FMLCommonSetupEvent event) { }
 
+    /**
+     * This method gets the Data Generators and generates
+     * the data for Models, Loot Tables, Language files and
+     * Recipes.
+     * @param event
+     */
     private void gatherData(final GatherDataEvent event) {
         DataGenerator gen = event.getGenerator();
         ExistingFileHelper helper = event.getExistingFileHelper();
@@ -52,6 +74,9 @@ public class ExampleMod {
         }
     }
 
+    /**
+     * This is the custom itemGroup of the Mod Example Mod
+     */
     public static final ItemGroup TAB = new ItemGroup("exampleTab") {
         @Override
         public ItemStack createIcon() {

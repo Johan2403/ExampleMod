@@ -7,6 +7,12 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
+/**
+ * This is the class where Items, Tools, Armor and BlockItems are
+ * initialized and registered.
+ *
+ * @author Johan24
+ */
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ExampleMod.MODID);
 

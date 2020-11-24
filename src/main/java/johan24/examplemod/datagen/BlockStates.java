@@ -14,12 +14,23 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import java.util.Map;
 import java.util.function.Supplier;
 
+/**
+ * This is the class in which the BlockStates and Block Models
+ * are generated for the Mod Example Mod.
+ *
+ * @author Johan24
+ */
 public class BlockStates extends BlockStateProvider {
 
     public BlockStates(DataGenerator gen, ExistingFileHelper exFileHelper) {
         super(gen, ExampleMod.MODID, exFileHelper);
     }
 
+    /**
+     * This method registers the BlockStates and Block
+     * models. Just use the methods(templates) to create BlockStates and
+     * Block models.
+     */
     @Override
     protected void registerStatesAndModels() {
         simpleBlock(ModBlocks.OBSIDIANITE_BLOCK);
@@ -34,6 +45,11 @@ public class BlockStates extends BlockStateProvider {
         horizontalBlock(block, templateExtender(block, textures));
     }
 
+    /**
+     * This creates a Model for the BlockItem.
+     * @param block
+     * @param model
+     */
     @Override
     public void simpleBlock(Block block, ModelFile model) {
         super.simpleBlock(block, model);

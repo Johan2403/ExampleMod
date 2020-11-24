@@ -6,8 +6,17 @@ import net.minecraft.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
 
+/**
+ * The enum which holds the ItemTier for the Mod ExampleMod.
+ * ItemTiers are essential for the creation of Tools.
+ *
+ * @author Johan24
+ */
 public enum ModItemTier implements IItemTier {
 
+    /**
+     * The ItemTier for the Obsidianite set of tools.
+     */
     OBSIDIANITE(3, 1893, 7.5F, 2.5F, 22, () -> {
         return Ingredient.fromItems(ModItems.OBSIDIANITE_INGOT.get());
     });
