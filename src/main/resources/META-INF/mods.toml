@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[34,)"
+loaderVersion="[35,)"
 license="MIT"
 issueTrackerURL="http://my.issue.tracker/"
 [[mods]]
@@ -12,7 +12,7 @@ logoFile="examplemod.png"
 credits="Mom and Dad."
 authors="Johan24"
 description='''
-This is an Example Mod made by Johan24 for Minecraft 1.16.3 Forge.
+This is an Example Mod made by Johan24 for Minecraft 1.16.4 Forge.
 The intent of this mod is to give valid examples of how to do some basic stuff using Forge API.
 
 This Mod is Licensed under the MIT License.
@@ -20,13 +20,13 @@ This Mod is Licensed under the MIT License.
 [[dependencies.examplemod]]
     modId="forge"
     mandatory=true
-    versionRange="[34,)"
+    versionRange="[35,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.examplemod]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.3]"
+    versionRange="[1.16.4]"
     ordering="NONE"
     side="BOTH"
