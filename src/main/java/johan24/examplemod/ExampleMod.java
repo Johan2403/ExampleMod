@@ -1,10 +1,12 @@
 package johan24.examplemod;
 
 import johan24.examplemod.client.ClientReference;
+import johan24.examplemod.datagen.Localization;
 import johan24.examplemod.init.ModBlocks;
 import johan24.examplemod.init.ModItems;
 import johan24.examplemod.server.dedicated.DedicatedServerReference;
 import johan24.examplemod.util.ISidedReference;
+import net.minecraft.data.DataGenerator;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -13,6 +15,7 @@ import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -28,6 +31,7 @@ public class ExampleMod {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus(), forgeEventBus = MinecraftForge.EVENT_BUS;
         SIDED_SYSTEM.setup(modEventBus, forgeEventBus);
         modEventBus.addListener(this::setup);
+        modEventBus.addListener(this::gatherData);
 
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
@@ -35,6 +39,13 @@ public class ExampleMod {
 
     private void setup(final FMLCommonSetupEvent event) {
 
+    }
+
+    private void gatherData(final GatherDataEvent event) {
+        DataGenerator gen = event.getGenerator();
+        if(event.includeClient()) {
+            gen.addProvider(new Localization(gen, "en_us"));
+        }
     }
 
     public static final ItemGroup TAB = new ItemGroup("exampleTab") {
