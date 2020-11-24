@@ -10,7 +10,6 @@ public class Localization extends LanguageProvider {
 
     public Localization(DataGenerator gen, String locale) {
         super(gen, ExampleMod.MODID, locale);
-
     }
 
     @Override
@@ -25,6 +24,9 @@ public class Localization extends LanguageProvider {
         addItem(ModItems.OBSIDIANITE_HOE, "Obsidianite Hoe");
 
         // Blocks
-        addBlock(ModBlocks.OBSIDIANITE_BLOCK, "obsidianite_block");
+        addBlock(ModBlocks.OBSIDIANITE_BLOCK, "Obsidianite Block");
+
+        // ItemGroup
+        add("itemGroup." + ExampleMod.TAB.getPath(), "Example Tab");
     }
 }
