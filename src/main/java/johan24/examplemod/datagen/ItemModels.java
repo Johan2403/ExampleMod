@@ -21,17 +21,26 @@ public class ItemModels extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.OBSIDIANITE_INGOT);
         simpleItem(ModItems.OBSIDIANITE_SCRAP);
-        simpleItem(ModItems.OBSIDIANITE_PICKAXE);
-        simpleItem(ModItems.OBSIDIANITE_SWORD);
-        simpleItem(ModItems.OBSIDIANITE_AXE);
-        simpleItem(ModItems.OBSIDIANITE_SHOVEL);
-        simpleItem(ModItems.OBSIDIANITE_HOE);
+
+        // Tools
+        toolItem(ModItems.OBSIDIANITE_PICKAXE);
+        toolItem(ModItems.OBSIDIANITE_SWORD);
+        toolItem(ModItems.OBSIDIANITE_AXE);
+        toolItem(ModItems.OBSIDIANITE_SHOVEL);
+        toolItem(ModItems.OBSIDIANITE_HOE);
     }
 
     public void simpleItem(Supplier<? extends Item> itemSupplier) {
         ResourceLocation location = itemSupplier.get().getRegistryName();
         this.getBuilder(location.getPath())
                 .parent(new ModelFile.UncheckedModelFile("item/generated"))
+                .texture("layer0", new ResourceLocation(location.getNamespace(), ITEM_FOLDER + "/" + location.getPath()));
+    }
+
+    public void toolItem(Supplier<? extends Item> itemSupplier) {
+        ResourceLocation location = itemSupplier.get().getRegistryName();
+        this.getBuilder(location.getPath())
+                .parent(new ModelFile.UncheckedModelFile("item/handheld"))
                 .texture("layer0", new ResourceLocation(location.getNamespace(), ITEM_FOLDER + "/" + location.getPath()));
     }
 }
