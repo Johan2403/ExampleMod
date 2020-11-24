@@ -168,3 +168,7 @@ processResources {
 sourceSets {
     main.resources.srcDirs += 'src/generated/resources'
 }
+
+project.afterEvaluate {
+    minecraft.runs.data.args('--existing', configurations.minecraft.asPath.split(":").toList().find { it.contains("forge") }.split(";")[0])
+}
