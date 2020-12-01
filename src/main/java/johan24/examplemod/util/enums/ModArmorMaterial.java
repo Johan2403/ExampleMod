@@ -12,6 +12,12 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.function.Supplier;
 
+/**
+ * The enum which holds the ArmorMaterial for the Mod ExampleMod.
+ * ArmorMaterials are essential for the creation of Armor.
+ *
+ * @author Johan24
+ */
 public enum ModArmorMaterial implements IArmorMaterial {
 
     /**
