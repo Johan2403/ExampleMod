@@ -1,9 +1,9 @@
 package johan24.examplemod;
 
 import johan24.examplemod.client.ClientReference;
-import johan24.examplemod.datagen.BlockStates;
-import johan24.examplemod.datagen.ItemModels;
-import johan24.examplemod.datagen.Localization;
+import johan24.examplemod.data.BlockStates;
+import johan24.examplemod.data.ItemModels;
+import johan24.examplemod.data.Localization;
 import johan24.examplemod.init.ModBlocks;
 import johan24.examplemod.init.ModItems;
 import johan24.examplemod.server.dedicated.DedicatedServerReference;
@@ -16,7 +16,6 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;

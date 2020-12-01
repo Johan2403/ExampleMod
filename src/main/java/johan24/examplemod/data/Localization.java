@@ -1,4 +1,4 @@
-package johan24.examplemod.datagen;
+package johan24.examplemod.data;
 
 import johan24.examplemod.ExampleMod;
 import johan24.examplemod.init.ModBlocks;
