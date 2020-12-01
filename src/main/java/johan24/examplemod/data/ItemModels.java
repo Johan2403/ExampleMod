@@ -37,6 +37,12 @@ public class ItemModels extends ItemModelProvider {
         toolItem(ModItems.OBSIDIANITE_AXE);
         toolItem(ModItems.OBSIDIANITE_SHOVEL);
         toolItem(ModItems.OBSIDIANITE_HOE);
+
+        // Armor
+        simpleItem(ModItems.OBSIDIANITE_HELMET);
+        simpleItem(ModItems.OBSIDIANITE_CHESTPLATE);
+        simpleItem(ModItems.OBSIDIANITE_LEGGINGS);
+        simpleItem(ModItems.OBSIDIANITE_BOOTS);
     }
 
     /**

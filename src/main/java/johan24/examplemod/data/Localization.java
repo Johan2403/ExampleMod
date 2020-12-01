@@ -27,6 +27,8 @@ public class Localization extends LanguageProvider {
         // Items
         addItem(ModItems.OBSIDIANITE_INGOT, "Obsidianite Ingot");
         addItem(ModItems.OBSIDIANITE_SCRAP, "Obsidianite Scrap");
+
+        // Tools
         addItem(ModItems.OBSIDIANITE_PICKAXE, "Obsidianite Pickaxe");
         addItem(ModItems.OBSIDIANITE_SWORD, "Obsidianite Sword");
         addItem(ModItems.OBSIDIANITE_AXE, "Obsidianite Axe");
@@ -38,5 +40,11 @@ public class Localization extends LanguageProvider {
 
         // ItemGroup
         add("itemGroup." + ExampleMod.TAB.getPath(), "Example Tab");
+
+        // Armor
+        addItem(ModItems.OBSIDIANITE_HELMET, "Obsidianite Helmet");
+        addItem(ModItems.OBSIDIANITE_CHESTPLATE, "Obsidianite Chestplate");
+        addItem(ModItems.OBSIDIANITE_LEGGINGS, "Obsidianite Leggings");
+        addItem(ModItems.OBSIDIANITE_BOOTS, "Obsidianite Boots");
     }
 }
