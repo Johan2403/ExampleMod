@@ -68,8 +68,8 @@ public class ExampleMod {
         ExistingFileHelper helper = event.getExistingFileHelper();
         if(event.includeClient()) {
             gen.addProvider(new Localization(gen, "en_us"));
-            gen.addProvider(new BlockStates(gen, helper));
             gen.addProvider(new ItemModels(gen, helper));
+            gen.addProvider(new BlockStates(gen, helper));
         }
     }
 
