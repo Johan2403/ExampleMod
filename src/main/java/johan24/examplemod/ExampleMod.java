@@ -53,7 +53,7 @@ public class ExampleMod {
     /**
      * Any code inside this method will be executed during
      * the common setup.
-     * @param event
+     * @param event The FMLCommonSetupEvent
      */
     private void setup(final FMLCommonSetupEvent event) { }
 
@@ -61,7 +61,7 @@ public class ExampleMod {
      * This method gets the Data Generators and generates
      * the data for Models, Loot Tables, Language files and
      * Recipes.
-     * @param event
+     * @param event The GatherDataEvent
      */
     private void gatherData(final GatherDataEvent event) {
         DataGenerator gen = event.getGenerator();

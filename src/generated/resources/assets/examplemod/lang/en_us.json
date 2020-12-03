@@ -1,8 +1,12 @@
 {
   "block.examplemod.obsidianite_block": "Block of Obsidianite",
   "item.examplemod.obsidianite_axe": "Obsidianite Axe",
+  "item.examplemod.obsidianite_boots": "Obsidianite Boots",
+  "item.examplemod.obsidianite_chestplate": "Obsidianite Chestplate",
+  "item.examplemod.obsidianite_helmet": "Obsidianite Helmet",
   "item.examplemod.obsidianite_hoe": "Obsidianite Hoe",
   "item.examplemod.obsidianite_ingot": "Obsidianite Ingot",
+  "item.examplemod.obsidianite_leggings": "Obsidianite Leggings",
   "item.examplemod.obsidianite_pickaxe": "Obsidianite Pickaxe",
   "item.examplemod.obsidianite_scrap": "Obsidianite Scrap",
   "item.examplemod.obsidianite_shovel": "Obsidianite Shovel",
