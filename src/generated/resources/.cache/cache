@@ -13,3 +13,7 @@ efe626da705bf252f8a7f3c9179390be4f75ae6e assets/examplemod/models/item/obsidiani
 0c2829c71f1b759329ce08a543c2f787e01a5760 assets/examplemod/models/item/obsidianite_scrap.json
 c7992d1d0ccee5ebca20c2c39f83f482dc10fb48 assets/examplemod/models/item/obsidianite_shovel.json
 df45b2b8f4a7a985c9a24f532ebc96b5316b0be4 assets/examplemod/models/item/obsidianite_sword.json
+674be77c414374a65ce67db21d896e7edab6f899 data/forge/tags/items/ingots.json
+ddc54ba920f3fd3638cad861cc3d637950e769d3 data/forge/tags/items/ingots/obsidianite.json
+3420197da56df390765fb4e62735cbc75f4cbd53 data/minecraft/tags/blocks/beacon_base_blocks.json
+ddc54ba920f3fd3638cad861cc3d637950e769d3 data/minecraft/tags/items/beacon_payment_items.json

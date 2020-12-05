@@ -1,9 +1,7 @@
 package johan24.examplemod;
 
 import johan24.examplemod.client.ClientReference;
-import johan24.examplemod.data.BlockStates;
-import johan24.examplemod.data.ItemModels;
-import johan24.examplemod.data.Localization;
+import johan24.examplemod.data.*;
 import johan24.examplemod.init.ModBlocks;
 import johan24.examplemod.init.ModItems;
 import johan24.examplemod.server.dedicated.DedicatedServerReference;
@@ -70,6 +68,12 @@ public class ExampleMod {
             gen.addProvider(new Localization(gen, "en_us"));
             gen.addProvider(new ItemModels(gen, helper));
             gen.addProvider(new BlockStates(gen, helper));
+        }
+        if(event.includeServer()) {
+            BlockTags block_tags = new BlockTags(gen, helper);
+
+            gen.addProvider(block_tags);
+            gen.addProvider(new ItemTags(gen, block_tags, helper));
         }
     }
 
