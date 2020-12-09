@@ -20,9 +20,9 @@ import java.util.function.Supplier;
  *
  * @author Johan24
  */
-public class BlockStates extends BlockStateProvider {
+public class ExampleModBlockStatesProvider extends BlockStateProvider {
 
-    public BlockStates(DataGenerator gen, ExistingFileHelper exFileHelper) {
+    public ExampleModBlockStatesProvider(DataGenerator gen, ExistingFileHelper exFileHelper) {
         super(gen, ExampleMod.MODID, exFileHelper);
     }
 

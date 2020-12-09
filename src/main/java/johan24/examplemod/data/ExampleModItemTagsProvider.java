@@ -11,9 +11,9 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 
 import javax.annotation.Nullable;
 
-public class ItemTags extends ItemTagsProvider {
+public class ExampleModItemTagsProvider extends ItemTagsProvider {
 
-    public ItemTags(DataGenerator dataGenerator, BlockTagsProvider blockTagProvider, @Nullable ExistingFileHelper existingFileHelper) {
+    public ExampleModItemTagsProvider(DataGenerator dataGenerator, BlockTagsProvider blockTagProvider, @Nullable ExistingFileHelper existingFileHelper) {
         super(dataGenerator, blockTagProvider, ExampleMod.MODID, existingFileHelper);
     }
 

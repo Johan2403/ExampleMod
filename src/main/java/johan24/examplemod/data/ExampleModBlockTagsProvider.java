@@ -10,8 +10,8 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 
 import javax.annotation.Nullable;
 
-public class BlockTags extends BlockTagsProvider {
-    public BlockTags(DataGenerator generatorIn, @Nullable ExistingFileHelper existingFileHelper) {
+public class ExampleModBlockTagsProvider extends BlockTagsProvider {
+    public ExampleModBlockTagsProvider(DataGenerator generatorIn, @Nullable ExistingFileHelper existingFileHelper) {
         super(generatorIn, ExampleMod.MODID, existingFileHelper);
     }
 

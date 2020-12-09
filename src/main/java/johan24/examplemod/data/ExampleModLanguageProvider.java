@@ -12,9 +12,9 @@ import net.minecraftforge.common.data.LanguageProvider;
  *
  * @author Johan24
  */
-public class Localization extends LanguageProvider {
+public class ExampleModLanguageProvider extends LanguageProvider {
 
-    public Localization(DataGenerator gen, String locale) {
+    public ExampleModLanguageProvider(DataGenerator gen, String locale) {
         super(gen, ExampleMod.MODID, locale);
     }
 

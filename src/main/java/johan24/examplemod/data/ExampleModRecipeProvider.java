@@ -19,9 +19,9 @@ import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import javax.annotation.Nullable;
 import java.util.function.Consumer;
 
-public class Recipes extends RecipeProvider implements IConditionBuilder {
+public class ExampleModRecipeProvider extends RecipeProvider implements IConditionBuilder {
 
-    public Recipes(DataGenerator generatorIn) {
+    public ExampleModRecipeProvider(DataGenerator generatorIn) {
         super(generatorIn);
     }
 

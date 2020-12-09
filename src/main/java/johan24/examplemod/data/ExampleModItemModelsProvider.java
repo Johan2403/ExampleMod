@@ -17,9 +17,9 @@ import java.util.function.Supplier;
  *
  * @author Johan24
  */
-public class ItemModels extends ItemModelProvider {
+public class ExampleModItemModelsProvider extends ItemModelProvider {
 
-    public ItemModels(DataGenerator gen, ExistingFileHelper exFileHelper) {
+    public ExampleModItemModelsProvider(DataGenerator gen, ExistingFileHelper exFileHelper) {
         super(gen, ExampleMod.MODID, exFileHelper);
     }
 

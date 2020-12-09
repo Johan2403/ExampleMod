@@ -65,16 +65,16 @@ public class ExampleMod {
         DataGenerator gen = event.getGenerator();
         ExistingFileHelper helper = event.getExistingFileHelper();
         if(event.includeClient()) {
-            gen.addProvider(new Localization(gen, "en_us"));
-            gen.addProvider(new ItemModels(gen, helper));
-            gen.addProvider(new BlockStates(gen, helper));
+            gen.addProvider(new ExampleModLanguageProvider(gen, "en_us"));
+            gen.addProvider(new ExampleModItemModelsProvider(gen, helper));
+            gen.addProvider(new ExampleModBlockStatesProvider(gen, helper));
         }
         if(event.includeServer()) {
-            BlockTags block_tags = new BlockTags(gen, helper);
+            ExampleModBlockTagsProvider block_tags = new ExampleModBlockTagsProvider(gen, helper);
 
             gen.addProvider(block_tags);
-            gen.addProvider(new ItemTags(gen, block_tags, helper));
-            gen.addProvider(new Recipes(gen));
+            gen.addProvider(new ExampleModItemTagsProvider(gen, block_tags, helper));
+            gen.addProvider(new ExampleModRecipeProvider(gen));
         }
     }
 
