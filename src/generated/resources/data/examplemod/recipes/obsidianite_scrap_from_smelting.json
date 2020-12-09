@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "forge:obsidian"
+  },
+  "result": "examplemod:obsidianite_scrap",
+  "experience": 4.0,
+  "cookingtime": 250
+}

@@ -37,6 +37,7 @@ public class Localization extends LanguageProvider {
 
         // Blocks
         addBlock(ModBlocks.OBSIDIANITE_BLOCK, "Block of Obsidianite");
+        addBlock(ModBlocks.OBSIDIANITE_ORE, "Obsidianite Ore");
 
         // ItemGroup
         add("itemGroup." + ExampleMod.TAB.getPath(), "Example Tab");

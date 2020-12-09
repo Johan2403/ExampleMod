@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "examplemod:obsidianite_block"
+    ]
+  },
+  "criteria": {
+    "has_obsidianite_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:ingots/obsidianite"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "examplemod:obsidianite_block"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_obsidianite_ingot",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -34,6 +34,7 @@ public class BlockStates extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         simpleBlock(ModBlocks.OBSIDIANITE_BLOCK);
+        simpleBlock(ModBlocks.OBSIDIANITE_ORE);
     }
 
     public void simpleBlock(Supplier<? extends Block> blockSupplier) {

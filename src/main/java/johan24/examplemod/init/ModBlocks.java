@@ -1,6 +1,7 @@
 package johan24.examplemod.init;
 
 import johan24.examplemod.ExampleMod;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -23,5 +24,13 @@ public class ModBlocks {
                                             .harvestTool(ToolType.PICKAXE)
                                             .harvestLevel(2)
                                             .sound(SoundType.METAL)
+                                            .setRequiresTool()));
+
+    public static final RegistryObject<Block> OBSIDIANITE_ORE = BLOCKS.register("obsidianite_ore",
+            () -> new Block(Block.Properties.create(Material.ROCK)
+                                            .hardnessAndResistance(4.5F, 6000.0F)
+                                            .harvestTool(ToolType.PICKAXE)
+                                            .harvestLevel(2)
+                                            .sound(SoundType.STONE)
                                             .setRequiresTool()));
 }

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "obsidianite_ingot",
+  "ingredients": [
+    {
+      "item": "examplemod:obsidianite_block"
+    }
+  ],
+  "result": {
+    "item": "examplemod:obsidianite_ingot",
+    "count": 9
+  }
+}

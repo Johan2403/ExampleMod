@@ -74,13 +74,14 @@ public class ExampleMod {
 
             gen.addProvider(block_tags);
             gen.addProvider(new ItemTags(gen, block_tags, helper));
+            gen.addProvider(new Recipes(gen));
         }
     }
 
     /**
      * This is the custom itemGroup of the Mod Example Mod
      */
-    public static final ItemGroup TAB = new ItemGroup("exampleTab") {
+    public static final ItemGroup TAB = new ItemGroup("example_tab") {
         @Override
         public ItemStack createIcon() {
             return new ItemStack(ModItems.OBSIDIANITE_INGOT.get());

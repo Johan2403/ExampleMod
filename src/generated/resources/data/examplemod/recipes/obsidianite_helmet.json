@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "helmets",
+  "pattern": [
+    "XXX",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "tag": "forge:ingots/obsidianite"
+    }
+  },
+  "result": {
+    "item": "examplemod:obsidianite_helmet"
+  }
+}

@@ -20,10 +20,11 @@ public class ItemTags extends ItemTagsProvider {
     @Override
     protected void registerTags() {
 
-        /* Adds custom item tags to vanilla. */
+        copy(Tags.Blocks.ORES, Tags.Items.ORES);
+        copy(ExampleTags.Blocks.ORES_OBSIDIANITE, ExampleTags.Items.ORES_OBSIDIANITE);
+
         getOrCreateBuilder(Tags.Items.INGOTS).addTag(ExampleTags.Items.INGOT_OBSIDIANITE);
 
-        /* Adds Items to our tags. */
         getOrCreateBuilder(ExampleTags.Items.INGOT_OBSIDIANITE).add(ModItems.OBSIDIANITE_INGOT.get());
 
         /* Adds Items to vanilla tags. */
