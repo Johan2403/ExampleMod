@@ -75,6 +75,7 @@ public class ExampleMod {
             gen.addProvider(block_tags);
             gen.addProvider(new ExampleModItemTagsProvider(gen, block_tags, helper));
             gen.addProvider(new ExampleModRecipeProvider(gen));
+            gen.addProvider(new ExampleModLootTableProvider(gen));
         }
     }
 
