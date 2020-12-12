@@ -19,7 +19,7 @@ public class ClientReference implements ISidedReference {
     /**
      * The code inside this method will be executed during
      * the client setup.
-     * @param event
+     * @param event - FMLClientSetupEvent
      */
     private void clientSetup(final FMLClientSetupEvent event) {
 
