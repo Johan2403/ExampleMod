@@ -45,7 +45,7 @@ public class ExampleMod {
         modEventBus.addListener(this::gatherData);
 
         ModBlocks.BLOCKS.register(modEventBus);
-        ModItems.ITEMS.register(modEventBus);
+
     }
 
     /**
