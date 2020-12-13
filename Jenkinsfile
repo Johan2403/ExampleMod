@@ -1,26 +1,28 @@
 pipeline {
-    agent any
+  agent any
+  stages {
+    stage('Build') {
+      steps {
+        echo 'Building ExampleMod'
+        sh './gradlew build'
+      }
+    }
 
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building ExampleMod'
-                sh './gradlew build'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing ExampleMod'
-                sh './gradlew test'
-            }
-        }
+    stage('Test') {
+      steps {
+        echo 'Testing ExampleMod'
+        sh './gradlew test'
+      }
     }
-    
-    post {
-        always {
-            script {
-                archiveArtifacts artifacts: '**/build/libs/*.jar', fingerprint: true, onlyIfSuccessful: true, allowEmptyArchive: true
-            }
-        }
+
+  }
+  post {
+    always {
+      script {
+        archiveArtifacts artifacts: '**/build/libs/*.jar', fingerprint: true, onlyIfSuccessful: true, allowEmptyArchive: true
+      }
+
     }
+
+  }
 }
