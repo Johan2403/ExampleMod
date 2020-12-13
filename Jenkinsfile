@@ -1,6 +1,11 @@
 pipeline {
   agent any
   stages {
+    stage('Grant Permission') {
+      steps {
+        sh 'chmod +x gradlew'
+      }
+    }  
     stage('Build') {
       steps {
         echo 'Building ExampleMod'
