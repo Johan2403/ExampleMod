@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('Grant Permission') {
+    stage('Grant Permission') { // Grants permission
       steps {
         sh 'chmod +x gradlew'
       }
