@@ -6,7 +6,7 @@ pipeline {
         sh 'chmod +x gradlew'
       }
     }  
-    stage('Build') { // This takes a lot of time...
+    stage('Build') {
       steps {
         echo 'Building ExampleMod'
         sh './gradlew build -Dorg.gradle.jvmargs=-Xmx756M'
