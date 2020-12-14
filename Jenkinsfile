@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('Grant Permission') { // Grants permission
+    stage('Grant Permission') {
       steps {
         sh 'chmod +x gradlew'
       }
@@ -9,14 +9,14 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building ExampleMod'
-        sh './gradlew build'
+        sh './gradlew build -Dorg.gradle.jvmargs=-Xmx756M'
       }
     }
 
     stage('Test') {
       steps {
         echo 'Testing ExampleMod'
-        sh './gradlew test'
+        sh './gradlew test -Dorg.gradle.jvmargs=-Xmx756M'
       }
     }
 
