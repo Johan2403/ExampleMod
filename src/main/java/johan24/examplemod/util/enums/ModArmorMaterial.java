@@ -24,7 +24,7 @@ public enum ModArmorMaterial implements IArmorMaterial {
      * The ArmorMaterial for the Obsidianite set of armor.
      */
     OBSIDIANITE(ExampleMod.MODID + ":obsidianite", 25, new int[] { 2, 5, 6, 3 }, 18,
-            SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1, 2, () -> { return Ingredient.fromItems(ModItems.OBSIDIANITE_INGOT.get());});
+            SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1, 0.2F, () -> { return Ingredient.fromItems(ModItems.OBSIDIANITE_INGOT.get());});
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[]{13, 15, 16, 11};
     private final String name;

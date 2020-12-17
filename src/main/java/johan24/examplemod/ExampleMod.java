@@ -3,6 +3,7 @@ package johan24.examplemod;
 import johan24.examplemod.client.ClientReference;
 import johan24.examplemod.data.*;
 import johan24.examplemod.init.ModBlocks;
+import johan24.examplemod.init.ModFeatures;
 import johan24.examplemod.init.ModItems;
 import johan24.examplemod.server.dedicated.DedicatedServerReference;
 import johan24.examplemod.util.ISidedReference;
@@ -45,7 +46,8 @@ public class ExampleMod {
         modEventBus.addListener(this::gatherData);
 
         ModBlocks.BLOCKS.register(modEventBus);
-
+        ModItems.ITEMS.register(modEventBus);
+        ModFeatures.FEATURES.register(modEventBus);
     }
 
     /**
