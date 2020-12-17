@@ -1,4 +1,4 @@
-Example Mod ![Build Status](https://github.com/Johan2403/ExampleMod/workflows/Java%20CI%20with%20Gradle/badge.svg)
+Example Mod ![Build Status](https://github.com/Johan2403/ExampleMod/workflows/Java%20CI%20with%20Gradle/badge.svg) [![Build Status](https://travis-ci.org/Johan2403/ExampleMod.svg?branch=1.16.4)](https://travis-ci.org/Johan2403/ExampleMod)
 ===
 
 This is an Example Mod made by Johan24 for Minecraft 1.16.4 Forge.
