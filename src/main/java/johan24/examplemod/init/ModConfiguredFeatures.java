@@ -39,7 +39,7 @@ public class ModConfiguredFeatures {
             register(OBSIDIANITE_ORE, Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, ModBlocks.OBSIDIANITE_ORE.get().getDefaultState(), 9))
             .range(16)
             .square()
-            .func_242731_b(9));
+            .func_242731_b(20));
         }
 
         private static void register(final RegistryKey<ConfiguredFeature<?, ?>> key, final ConfiguredFeature<?, ?> configuredFeature) {
