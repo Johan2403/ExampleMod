@@ -1,6 +1,8 @@
 package johan24.examplemod;
 
 import johan24.examplemod.client.ClientReference;
+import johan24.examplemod.client.ModClientEvents;
+import johan24.examplemod.config.ExampleModConfig;
 import johan24.examplemod.data.*;
 import johan24.examplemod.init.ModBlocks;
 import johan24.examplemod.init.ModFeatures;
@@ -12,9 +14,12 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -48,6 +53,8 @@ public class ExampleMod {
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
         ModFeatures.FEATURES.register(modEventBus);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ExampleModConfig.commonSpec);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, ExampleModConfig.clientSpec);
     }
 
     /**
@@ -55,7 +62,9 @@ public class ExampleMod {
      * the common setup.
      * @param event The FMLCommonSetupEvent
      */
-    private void setup(final FMLCommonSetupEvent event) { }
+    private void setup(final FMLCommonSetupEvent event) {
+
+    }
 
     /**
      * This method gets the Data Generators and generates

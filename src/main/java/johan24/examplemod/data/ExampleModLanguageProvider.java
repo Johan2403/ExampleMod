@@ -47,5 +47,10 @@ public class ExampleModLanguageProvider extends LanguageProvider {
         addItem(ModItems.OBSIDIANITE_CHESTPLATE, "Obsidianite Chestplate");
         addItem(ModItems.OBSIDIANITE_LEGGINGS, "Obsidianite Leggings");
         addItem(ModItems.OBSIDIANITE_BOOTS, "Obsidianite Boots");
+
+        // Other
+        add("examplemod.config.common.spawnZombieKnights", "Spawn Zombie Knights");
+        add("examplemod.config.client.enableHitNotification", "Enable Hit Notification");
+        add("examplemod.config.client.disableSmithing", "Disable Smithing");
     }
 }

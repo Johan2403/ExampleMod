@@ -1,5 +1,6 @@
 package johan24.examplemod;
 
+import johan24.examplemod.config.ExampleModConfig;
 import net.minecraft.entity.monster.ZombieEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -24,10 +25,12 @@ public class ModEvents {
      */
     @SubscribeEvent
     public static void zombieKnights(EntityJoinWorldEvent event) {
-        if(!(event.getEntity() instanceof ZombieEntity))
-            return;
+        if(ExampleModConfig.COMMON.spawnZombieKnight.get()) {
+            if(!(event.getEntity() instanceof ZombieEntity))
+                return;
 
-        ZombieEntity zombie = (ZombieEntity) event.getEntity();
-        zombie.setHeldItem(Hand.MAIN_HAND, new ItemStack(Items.DIAMOND_AXE));
+            ZombieEntity zombie = (ZombieEntity) event.getEntity();
+            zombie.setHeldItem(Hand.MAIN_HAND, new ItemStack(Items.DIAMOND_AXE));
+        }
     }
 }
