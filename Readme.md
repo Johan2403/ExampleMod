@@ -14,7 +14,7 @@ Note: This is just a test mod you might not be able to build it and play with it
 ### Download
 
 Just clone this repository and run `./gradlew build` to build the JAR or import the project 
-into your IDE and hacking it.
+into your IDE and start hacking it.
 
 ### Documentation
 
