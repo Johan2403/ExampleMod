@@ -1,12 +1,11 @@
 package johan24.examplemod.init;
 
 import johan24.examplemod.ExampleMod;
+import johan24.examplemod.item.ObsidianiteAppleItem;
 import johan24.examplemod.util.enums.ModArmorMaterial;
 import johan24.examplemod.util.enums.ModItemTier;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effects;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -68,11 +67,5 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterial.OBSIDIANITE, EquipmentSlotType.FEET, new Item.Properties().group(ExampleMod.TAB)));
 
     // Food
-    public static final RegistryObject<Item> OBSIDIANITE_APPLE = ITEMS.register("obsidianite_apple",
-            () -> new Item(new Item.Properties().food(new Food.Builder()
-                                                              .hunger(6)
-                                                              .saturation(14.0F)
-                                                              .effect(() -> new EffectInstance(Effects.FIRE_RESISTANCE, (60 * 30)), 1)
-                                                              .effect(() -> new EffectInstance(Effects.RESISTANCE, (60 * 15)), 1)
-                                                              .build()).group(ExampleMod.TAB)));
+    public static final RegistryObject<ObsidianiteAppleItem> OBSIDIANITE_APPLE = ITEMS.register("obsidianite_apple", ObsidianiteAppleItem::new);
 }
