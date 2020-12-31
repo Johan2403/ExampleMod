@@ -10,6 +10,7 @@ import net.minecraft.data.LootTableProvider;
 import net.minecraft.loot.*;
 import net.minecraft.util.ResourceLocation;
 
+import javax.annotation.Nonnull;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -38,7 +39,7 @@ public class ExampleModLootTableProvider extends LootTableProvider {
     }
 
     @Override
-    protected void validate(final Map<ResourceLocation, LootTable> map, final ValidationTracker validationtracker) {
+    protected void validate(final Map<ResourceLocation, LootTable> map, @Nonnull final ValidationTracker validationtracker) {
         final Set<ResourceLocation> modLootTableIds = LootTables
                 .getReadOnlyLootTables()
                 .stream()
@@ -49,9 +50,7 @@ public class ExampleModLootTableProvider extends LootTableProvider {
             validationtracker.addProblem("Missing mod loot table: " + id);
         }
 
-        map.forEach((id, lootTable) -> {
-            LootTableManager.validateLootTable(validationtracker, id, lootTable);
-        });
+        map.forEach((id, lootTable) -> LootTableManager.validateLootTable(validationtracker, id, lootTable));
     }
 
     /**

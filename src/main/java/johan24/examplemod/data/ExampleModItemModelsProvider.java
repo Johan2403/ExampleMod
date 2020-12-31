@@ -43,15 +43,19 @@ public class ExampleModItemModelsProvider extends ItemModelProvider {
         simpleItem(ModItems.OBSIDIANITE_CHESTPLATE);
         simpleItem(ModItems.OBSIDIANITE_LEGGINGS);
         simpleItem(ModItems.OBSIDIANITE_BOOTS);
+
+        // Food
+        simpleItem(ModItems.OBSIDIANITE_APPLE);
     }
 
     /**
      * Creates a simple item model with a parent minecraft:item/generated.
      * Use it for non-tool items.
-     * @param itemSupplier
+     * @param itemSupplier - The item supplier
      */
     public void simpleItem(Supplier<? extends Item> itemSupplier) {
         ResourceLocation location = itemSupplier.get().getRegistryName();
+        assert location != null;
         this.getBuilder(location.getPath())
                 .parent(new ModelFile.UncheckedModelFile("item/generated"))
                 .texture("layer0", new ResourceLocation(location.getNamespace(), ITEM_FOLDER + "/" + location.getPath()));
@@ -60,10 +64,11 @@ public class ExampleModItemModelsProvider extends ItemModelProvider {
     /**
      * Creates a simple tool item model with a parent minecraft:item/handheld.
      * Use it for tool items.
-     * @param itemSupplier
+     * @param itemSupplier - The item supplier
      */
     public void toolItem(Supplier<? extends Item> itemSupplier) {
         ResourceLocation location = itemSupplier.get().getRegistryName();
+        assert location != null;
         this.getBuilder(location.getPath())
                 .parent(new ModelFile.UncheckedModelFile("item/handheld"))
                 .texture("layer0", new ResourceLocation(location.getNamespace(), ITEM_FOLDER + "/" + location.getPath()));

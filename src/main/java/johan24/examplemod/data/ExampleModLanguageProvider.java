@@ -48,6 +48,9 @@ public class ExampleModLanguageProvider extends LanguageProvider {
         addItem(ModItems.OBSIDIANITE_LEGGINGS, "Obsidianite Leggings");
         addItem(ModItems.OBSIDIANITE_BOOTS, "Obsidianite Boots");
 
+        // Food
+        addItem(ModItems.OBSIDIANITE_APPLE, "Obsidianite Apple");
+
         // Other
         add("examplemod.config.common.spawnZombieKnights", "Spawn Zombie Knights");
         add("examplemod.config.client.enableHitNotification", "Enable Hit Notification");

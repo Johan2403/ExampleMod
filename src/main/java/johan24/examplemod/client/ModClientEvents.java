@@ -7,6 +7,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
+import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.GuiOpenEvent;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
@@ -34,8 +35,9 @@ public class ModClientEvents {
             if(event.getTarget().isAlive()) {
                 LivingEntity entity = (LivingEntity) event.getTarget();
                 PlayerEntity player = event.getPlayer();
+                World world = player.getEntityWorld();
 
-                if(!player.getEntityWorld().isRemote) {
+                if(!world.isRemote) {
                     String msg = TextFormatting.AQUA + "You hit the ";
                     player.sendMessage(new StringTextComponent(msg + removeNamespace(entity.getEntityString())), player.getUniqueID());
                 }

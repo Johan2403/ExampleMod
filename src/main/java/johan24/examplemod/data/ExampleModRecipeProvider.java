@@ -4,19 +4,17 @@ import johan24.examplemod.ExampleMod;
 import johan24.examplemod.init.ModBlocks;
 import johan24.examplemod.init.ModItems;
 import johan24.examplemod.tags.ExampleTags;
-import net.minecraft.block.Blocks;
 import net.minecraft.data.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.tags.ITag;
 import net.minecraft.tags.ITag.INamedTag;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import javax.annotation.Nullable;
+import java.util.Objects;
 import java.util.function.Consumer;
 
 public class ExampleModRecipeProvider extends RecipeProvider implements IConditionBuilder {
@@ -91,7 +89,7 @@ public class ExampleModRecipeProvider extends RecipeProvider implements IConditi
      * @param time       - The time taken for smelting.
      */
     protected static void addSmeltingRecipes(Consumer<IFinishedRecipe> consumer, INamedTag<Item> ore, Item result, float experience, int time) {
-        String name = result.getRegistryName().getPath();
+        String name = Objects.requireNonNull(result.getRegistryName()).getPath();
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(ore), result, experience, time).addCriterion("has_ore", hasItem(ore)).build(consumer, new ResourceLocation(ExampleMod.MODID, name + "_from_smelting"));
         CookingRecipeBuilder.blastingRecipe(Ingredient.fromTag(ore), result, experience, time / 2).addCriterion("has_ore", hasItem(ore)).build(consumer, new ResourceLocation(ExampleMod.MODID, name + "_from_blasting"));
     }

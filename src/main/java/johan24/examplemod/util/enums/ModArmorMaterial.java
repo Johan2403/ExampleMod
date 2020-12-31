@@ -26,7 +26,7 @@ public enum ModArmorMaterial implements IArmorMaterial {
     OBSIDIANITE(ExampleMod.MODID + ":obsidianite", 25, new int[] { 2, 5, 6, 3 }, 18,
             SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1, 0.2F, () -> { return Ingredient.fromItems(ModItems.OBSIDIANITE_INGOT.get());});
 
-    private static final int[] MAX_DAMAGE_ARRAY = new int[]{13, 15, 16, 11};
+    private final int[] MAX_DAMAGE_ARRAY = new int[]{13, 15, 16, 11};
     private final String name;
     private final int maxDamageFactor;
     private final int[] damageReductionAmountArray;
@@ -36,7 +36,7 @@ public enum ModArmorMaterial implements IArmorMaterial {
     private final float knockbackResistance;
     private final Supplier<Ingredient> repairMaterial;
 
-    private ModArmorMaterial(String name, int maxDamageFactor, int[] damageReductionAmountArray, int enchantability, SoundEvent soundEvent, float toughness, float knockbackResistance, Supplier<Ingredient> repairMaterial) {
+    ModArmorMaterial(String name, int maxDamageFactor, int[] damageReductionAmountArray, int enchantability, SoundEvent soundEvent, float toughness, float knockbackResistance, Supplier<Ingredient> repairMaterial) {
         this.name = name;
         this.maxDamageFactor = maxDamageFactor;
         this.damageReductionAmountArray = damageReductionAmountArray;
@@ -50,7 +50,7 @@ public enum ModArmorMaterial implements IArmorMaterial {
     /**
      * Gets the durability of the armor provided by the armor
      * of the material.
-     * @param slotIn
+     * @param slotIn - Equipment Slot
      */
     @Override
     public int getDurability(EquipmentSlotType slotIn) {
@@ -60,7 +60,7 @@ public enum ModArmorMaterial implements IArmorMaterial {
     /**
      * Gets the damage reduction percent provided by the armor of
      * the material.
-     * @param slotIn
+     * @param slotIn - Equipment Slot
      */
     @Override
     public int getDamageReductionAmount(EquipmentSlotType slotIn) {
@@ -94,7 +94,7 @@ public enum ModArmorMaterial implements IArmorMaterial {
 
     /**
      * Gets the name of the armor material.
-     * @return
+     * @return - Name of armor material
      */
     @OnlyIn(Dist.CLIENT)
     @Override

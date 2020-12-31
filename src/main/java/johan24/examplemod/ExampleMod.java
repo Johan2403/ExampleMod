@@ -1,7 +1,6 @@
 package johan24.examplemod;
 
 import johan24.examplemod.client.ClientReference;
-import johan24.examplemod.client.ModClientEvents;
 import johan24.examplemod.config.ExampleModConfig;
 import johan24.examplemod.data.*;
 import johan24.examplemod.init.ModBlocks;
@@ -14,7 +13,6 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModLoadingContext;
