@@ -53,7 +53,7 @@ pipeline {
         if(env.CHANGE_ID == null) {
           discordSend(
             title: "${DISCORD_PREFIX} Finished ${currentBuild.currentResult}",
-            description: '```\n' + getChanges(currentBuild) + '\n```',
+            description: '```\n' + currentBuild.changelog + '\n```',
             successful: currentBuild.resultIsBetterOrEqualTo("SUCCESS"),
             result: currentBuild.currentResult,
             thumbnail: JENKINS_HEAD,
