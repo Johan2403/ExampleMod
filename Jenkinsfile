@@ -5,7 +5,7 @@ pipeline {
         DISCORD_WEBHOOK = credentials('discord-jenkins-webhook')
         DISCORD_PREFIX = "Job: ${JOB_NAME} Branch: ${BRANCH_NAME} Build: #${BUILD_NUMBER}"
         JENKINS_HEAD = 'https://wiki.jenkins-ci.org/download/attachments/2916393/headshot.png'
-        COMMIT = sh(script: 'git log --pretty=format:"%h - %an, %ar : %s"', returnStdout: true)
+        COMMIT = sh(script: 'git log --format="medium" -1 ${GIT_COMMIT}', returnStdout: true)
     }
   
   stages {
