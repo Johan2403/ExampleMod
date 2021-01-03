@@ -16,13 +16,17 @@ pipeline {
       }
       
       steps {
-        discordSend(
+        script {
+          echo 'Starting Setup'
+          discordSend(
           title: "${DISCORD_PREFIX} Started",
           successful: true,
           result: 'ABORTED',
           thumbnail: JENKINS_HEAD,
           webhookURL: DISCORD_WEBHOOK
           )
+          sh 'chmod +x gradlew'
+        }
       }
     }
     
