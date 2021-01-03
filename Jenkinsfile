@@ -5,7 +5,7 @@ pipeline {
         DISCORD_WEBHOOK = credentials('discord-jenkins-webhook')
         DISCORD_PREFIX = "Job: ${JOB_NAME} Branch: ${BRANCH_NAME} Build: #${BUILD_NUMBER}"
         JENKINS_HEAD = 'https://wiki.jenkins-ci.org/download/attachments/2916393/headshot.png'
-        COMMIT = sh(script: "git log --format=format:%s -1", returnStdout: true)
+        COMMIT = sh(script: 'git log --pretty=format:"%h - %an, %ar : %s"', returnStdout: true)
     }
   
   stages {
@@ -54,7 +54,7 @@ pipeline {
         if(env.CHANGE_ID == null) {
           discordSend(
             title: "${DISCORD_PREFIX} Finished ${currentBuild.currentResult}",
-            description: '```\n ${COMMIT} \n```',
+            description: '```\n' + COMMIT + '\n```',
             successful: currentBuild.resultIsBetterOrEqualTo("SUCCESS"),
             result: currentBuild.currentResult,
             thumbnail: JENKINS_HEAD,
