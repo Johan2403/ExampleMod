@@ -22,7 +22,7 @@ The code is well documented. If you want the javadoc run `./gradlew javadoc` to 
 the javadoc.
 
 ### Build Status
-![Build Status](https://github.com/Johan2403/ExampleMod/workflows/Build/badge.svg)
+[![Build Status](https://travis-ci.org/Johan2403/ExampleMod.svg?branch=1.16.4)](https://travis-ci.org/Johan2403/ExampleMod)
 
 ### License
 
