@@ -11,12 +11,11 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle'
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'java'
-apply plugin: 'idea'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 version = '1.16.4-1.0'
-group = 'johan24.examplemod'
+group = 'mods.johan24'
 archivesBaseName = 'examplemod'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
@@ -73,7 +72,7 @@ minecraft {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.16.4-35.1.4'
+    minecraft 'net.minecraftforge:forge:1.16.4-35.1.37'
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntime 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
