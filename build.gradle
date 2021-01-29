@@ -14,7 +14,7 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.16.4-1.0'
+version = "${mc_version}-${mod_version}"
 group = 'mods.johan24'
 archivesBaseName = 'examplemod'
 
@@ -71,8 +71,18 @@ minecraft {
     }
 }
 
+repositories {
+    maven {
+        name = "Progwml6 maven"
+        url = "https://dvs1.progwml6.com/files/maven/"
+    }
+}
+
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.16.4-35.1.37'
+    minecraft "net.minecraftforge:forge:${mc_version}-${forge_version}"
+
+    compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api")
+    runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntime 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
