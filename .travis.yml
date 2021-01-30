@@ -6,8 +6,7 @@ jdk:
   - openjdk11
   - openjdk15
 before_install: chmod +x gradlew
-install: ./gradlew assemble --no-daemon --console=plain
-before_script: ./gradlew check --no-daemon --console=plain
+install: ./gradlew check --no-daemon --console=plain
 script: ./gradlew build --no-daemon --console=plain
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
