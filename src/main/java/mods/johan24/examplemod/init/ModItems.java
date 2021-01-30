@@ -35,6 +35,9 @@ public class ModItems {
     public static final RegistryObject<BlockItem> OBSIDIANITE_ORE_ITEM = ITEMS.register("obsidianite_ore",
             () -> new BlockItem(ModBlocks.OBSIDIANITE_ORE.get(), new Item.Properties().group(ExampleMod.TAB)));
 
+    public static final RegistryObject<BlockItem> OBSIDIANITE_CRATE_ITEM = ITEMS.register("obsidianite_crate",
+            () -> new BlockItem(ModBlocks.OBSIDIANITE_CRATE.get(), new Item.Properties().group(ExampleMod.TAB)));
+
 
     // Tools
     public static final RegistryObject<SwordItem> OBSIDIANITE_SWORD = ITEMS.register("obsidianite_sword",

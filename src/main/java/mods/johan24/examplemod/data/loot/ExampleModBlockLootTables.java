@@ -15,6 +15,7 @@ public class ExampleModBlockLootTables extends BlockLootTables {
     @Override
     protected void addTables() {
         this.registerDropSelfLootTable(ModBlocks.OBSIDIANITE_BLOCK.get());
+        this.registerDropSelfLootTable(ModBlocks.OBSIDIANITE_CRATE.get());
         this.registerLootTable(ModBlocks.OBSIDIANITE_ORE.get(), (obsidianite_ore) -> droppingItemWithFortune(obsidianite_ore, ModItems.OBSIDIANITE_INGOT.get()));
     }
 

@@ -1,6 +1,7 @@
 package mods.johan24.examplemod.init;
 
 import mods.johan24.examplemod.ExampleMod;
+import mods.johan24.examplemod.block.ObsidianiteCrateBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -32,4 +33,6 @@ public class ModBlocks {
                                             .harvestLevel(2)
                                             .sound(SoundType.STONE)
                                             .setRequiresTool()));
+
+    public static final RegistryObject<ObsidianiteCrateBlock> OBSIDIANITE_CRATE = BLOCKS.register("obsidianite_crate", ObsidianiteCrateBlock::new);
 }

@@ -38,6 +38,7 @@ public class ExampleModLanguageProvider extends LanguageProvider {
         // Blocks
         addBlock(ModBlocks.OBSIDIANITE_BLOCK, "Block of Obsidianite");
         addBlock(ModBlocks.OBSIDIANITE_ORE, "Obsidianite Ore");
+        addBlock(ModBlocks.OBSIDIANITE_CRATE, "Obsidianite Crate");
 
         // ItemGroup
         add("itemGroup." + ExampleMod.TAB.getPath(), "Example Tab");
@@ -51,7 +52,7 @@ public class ExampleModLanguageProvider extends LanguageProvider {
         // Food
         addItem(ModItems.OBSIDIANITE_APPLE, "Obsidianite Apple");
 
-        // Other
+        // Config
         add("examplemod.config.common.spawnZombieKnights", "Spawn Zombie Knights");
         add("examplemod.config.client.enableHitNotification", "Enable Hit Notification");
         add("examplemod.config.client.disableSmithing", "Disable Smithing");

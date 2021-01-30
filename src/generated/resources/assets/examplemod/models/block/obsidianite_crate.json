@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "examplemod:block/obsidianite_crate_top",
+    "bottom": "examplemod:block/obsidianite_block",
+    "side": "examplemod:block/obsidianite_block"
+  }
+}

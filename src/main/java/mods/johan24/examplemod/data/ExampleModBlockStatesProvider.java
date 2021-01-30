@@ -3,12 +3,9 @@ package mods.johan24.examplemod.data;
 import mods.johan24.examplemod.ExampleMod;
 import mods.johan24.examplemod.init.ModBlocks;
 import net.minecraft.block.Block;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.model.generators.BlockModelBuilder;
-import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraft.data.DataGenerator;
-import net.minecraftforge.client.model.generators.ModelFile;
-import net.minecraftforge.client.model.generators.ModelProvider;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.model.generators.*;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 import java.util.Map;
@@ -35,6 +32,7 @@ public class ExampleModBlockStatesProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         simpleBlock(ModBlocks.OBSIDIANITE_BLOCK);
         simpleBlock(ModBlocks.OBSIDIANITE_ORE);
+        obsidianiteCrateBlock();
     }
 
     public void simpleBlock(Supplier<? extends Block> blockSupplier) {
@@ -61,6 +59,18 @@ public class ExampleModBlockStatesProvider extends BlockStateProvider {
     public void horizontalBlock(Block block, ModelFile model) {
         super.horizontalBlock(block, model);
         this.simpleBlockItem(block, model);
+    }
+
+    public void obsidianiteCrateBlock() {
+        ResourceLocation name = ModBlocks.OBSIDIANITE_CRATE.get().getRegistryName();
+        BlockModelBuilder builder = this.models().withExistingParent(name.getPath(), "block/cube_bottom_top");
+        builder.texture("top", modLoc("block/obsidianite_crate_top"));
+        builder.texture("bottom", modLoc("block/obsidianite_block"));
+        builder.texture("side", modLoc("block/obsidianite_block"));
+        getVariantBuilder(ModBlocks.OBSIDIANITE_CRATE.get()).forAllStates(blockState -> ConfiguredModel.builder()
+                .modelFile(builder)
+                .build());
+        this.simpleBlockItem(ModBlocks.OBSIDIANITE_CRATE.get(), builder);
     }
 
     public BlockModelBuilder templateExtender(Block block, Map<String, ResourceLocation> textures) {

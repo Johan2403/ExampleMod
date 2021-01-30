@@ -2,9 +2,7 @@ package mods.johan24.examplemod;
 
 import mods.johan24.examplemod.client.ClientReference;
 import mods.johan24.examplemod.config.ExampleModConfig;
-import mods.johan24.examplemod.init.ModBlocks;
-import mods.johan24.examplemod.init.ModFeatures;
-import mods.johan24.examplemod.init.ModItems;
+import mods.johan24.examplemod.init.*;
 import mods.johan24.examplemod.server.dedicated.DedicatedServerReference;
 import mods.johan24.examplemod.util.ISidedReference;
 import mods.johan24.examplemod.data.*;
@@ -51,6 +49,7 @@ public class ExampleMod {
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
         ModFeatures.FEATURES.register(modEventBus);
+
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ExampleModConfig.commonSpec);
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, ExampleModConfig.clientSpec);
     }
