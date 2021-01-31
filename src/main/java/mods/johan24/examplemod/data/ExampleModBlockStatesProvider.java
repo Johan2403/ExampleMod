@@ -39,11 +39,6 @@ public class ExampleModBlockStatesProvider extends BlockStateProvider {
         simpleBlock(blockSupplier.get());
     }
 
-    public void templateExtenderHorizontalBlock(Supplier<? extends Block> blockSupplier, Map<String, ResourceLocation> textures) {
-        Block block = blockSupplier.get();
-        horizontalBlock(block, templateExtender(block, textures));
-    }
-
     /**
      * This creates a Model for the BlockItem.
      * @param block - Block
@@ -63,16 +58,16 @@ public class ExampleModBlockStatesProvider extends BlockStateProvider {
 
     public void obsidianiteCrateBlock() {
         ResourceLocation name = ModBlocks.OBSIDIANITE_CRATE.get().getRegistryName();
+        assert name != null;
         BlockModelBuilder builder = this.models().withExistingParent(name.getPath(), "block/cube_bottom_top");
         builder.texture("top", modLoc("block/obsidianite_crate_top"));
         builder.texture("bottom", modLoc("block/obsidianite_block"));
         builder.texture("side", modLoc("block/obsidianite_block"));
-        getVariantBuilder(ModBlocks.OBSIDIANITE_CRATE.get()).forAllStates(blockState -> ConfiguredModel.builder()
-                .modelFile(builder)
-                .build());
+
         this.simpleBlockItem(ModBlocks.OBSIDIANITE_CRATE.get(), builder);
     }
 
+    /*
     public BlockModelBuilder templateExtender(Block block, Map<String, ResourceLocation> textures) {
         ResourceLocation name = block.getRegistryName();
         assert name != null;
@@ -80,4 +75,6 @@ public class ExampleModBlockStatesProvider extends BlockStateProvider {
         textures.forEach(builder::texture);
         return builder;
     }
+
+     */
 }

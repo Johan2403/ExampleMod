@@ -5,6 +5,7 @@
   "examplemod.config.client.disableSmithing": "Disable Smithing",
   "examplemod.config.client.enableHitNotification": "Enable Hit Notification",
   "examplemod.config.common.spawnZombieKnights": "Spawn Zombie Knights",
+  "examplemod.container.obsidianite_crate": "Obsidianite Crate",
   "item.examplemod.obsidianite_apple": "Obsidianite Apple",
   "item.examplemod.obsidianite_axe": "Obsidianite Axe",
   "item.examplemod.obsidianite_boots": "Obsidianite Boots",

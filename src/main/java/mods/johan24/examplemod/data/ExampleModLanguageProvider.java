@@ -52,6 +52,9 @@ public class ExampleModLanguageProvider extends LanguageProvider {
         // Food
         addItem(ModItems.OBSIDIANITE_APPLE, "Obsidianite Apple");
 
+        // Container
+        add("examplemod.container.obsidianite_crate", "Obsidianite Crate");
+
         // Config
         add("examplemod.config.common.spawnZombieKnights", "Spawn Zombie Knights");
         add("examplemod.config.client.enableHitNotification", "Enable Hit Notification");

@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "x": 180,
+      "model": "examplemod:block/obsidianite_crate"
+    },
+    "facing=east": {
+      "x": 90,
+      "y": 90,
+      "model": "examplemod:block/obsidianite_crate"
+    },
+    "facing=north": {
+      "x": 90,
+      "model": "examplemod:block/obsidianite_crate"
+    },
+    "facing=south": {
+      "x": 90,
+      "y": 180,
+      "model": "examplemod:block/obsidianite_crate"
+    },
+    "facing=up": {
+      "model": "examplemod:block/obsidianite_crate"
+    },
+    "facing=west": {
+      "x": 90,
+      "y": 270,
+      "model": "examplemod:block/obsidianite_crate"
+    }
+  }
+}
