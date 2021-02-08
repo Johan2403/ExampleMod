@@ -16,7 +16,7 @@ apply plugin: 'maven-publish'
 
 version = "${mc_version}-${mod_version}"
 group = 'mods.johan24'
-archivesBaseName = 'examplemod'
+archivesBaseName = 'ExampleMod'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
