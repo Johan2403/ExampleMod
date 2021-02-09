@@ -49,6 +49,7 @@ public class ExampleMod {
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
         ModTileEntities.TILES.register(modEventBus);
+        ModBiomes.BIOMES.register(modEventBus);
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ExampleModConfig.commonSpec);
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, ExampleModConfig.clientSpec);
