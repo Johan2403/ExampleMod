@@ -35,7 +35,7 @@ public class ModClientEvents {
                 PlayerEntity player = event.getPlayer();
                 World world = player.getCommandSenderWorld();
 
-                if(!world.isClientSide()) {
+                if(world.isClientSide()) {
                     String msg = TextFormatting.AQUA + "You hit the ";
                     player.sendMessage(new StringTextComponent(msg + entity.getName().getString()), player.getUUID());
                 }
