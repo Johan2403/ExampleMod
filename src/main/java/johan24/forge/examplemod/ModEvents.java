@@ -26,11 +26,13 @@ public class ModEvents {
     @SubscribeEvent
     public static void zombieKnights(EntityJoinWorldEvent event) {
         if(ExampleModConfig.COMMON.spawnZombieKnight.get()) {
-            if(!(event.getEntity() instanceof ZombieEntity))
-                return;
+            if(!event.getWorld().isClientSide()) {
+                if(!(event.getEntity() instanceof ZombieEntity))
+                    return;
 
-            ZombieEntity zombie = (ZombieEntity) event.getEntity();
-            zombie.setItemInHand(Hand.MAIN_HAND, new ItemStack(Items.DIAMOND_AXE));
+                ZombieEntity zombie = (ZombieEntity) event.getEntity();
+                zombie.setItemInHand(Hand.MAIN_HAND, new ItemStack(Items.DIAMOND_AXE));
+            }
         }
     }
 }
