@@ -5,9 +5,9 @@ jdk:
   - openjdk8
   - openjdk11
   - openjdk15
-before_install: chmod +x gradlew
-install: ./gradlew check --no-daemon --console=plain
-script: ./gradlew build --no-daemon --console=plain
+install: skip
+before_script: chmod +x gradlew
+script: ./gradlew build
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
