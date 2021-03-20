@@ -29,15 +29,15 @@ public class ModCapeLayer extends CapeLayer {
     }
 
     @Override
-    public void render(MatrixStack p_225628_1_, IRenderTypeBuffer p_225628_2_, int p_225628_3_, AbstractClientPlayerEntity player, float p_225628_5_, float p_225628_6_, float p_225628_7_, float p_225628_8_, float p_225628_9_, float p_225628_10_) {
+    public void render(MatrixStack matrixStackIn, IRenderTypeBuffer bufferIn, int packedLightIn, AbstractClientPlayerEntity player, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
         if (player.isCapeLoaded() && !player.isInvisible() && player.isModelPartShown(PlayerModelPart.CAPE) && player.getName().getString().equalsIgnoreCase("Dev")) {
             ItemStack itemstack = player.getItemBySlot(EquipmentSlotType.CHEST);
             if (itemstack.getItem() != Items.ELYTRA) {
-                p_225628_1_.pushPose();
-                p_225628_1_.translate(0.0D, 0.0D, 0.125D);
-                double d0 = MathHelper.lerp(p_225628_7_, player.xCloakO, player.xCloak) - MathHelper.lerp(p_225628_7_, player.xo, player.getX());
-                double d1 = MathHelper.lerp(p_225628_7_, player.yCloakO, player.yCloak) - MathHelper.lerp(p_225628_7_, player.yo, player.getY());
-                double d2 = MathHelper.lerp(p_225628_7_, player.zCloakO, player.zCloak) - MathHelper.lerp(p_225628_7_, player.zo, player.getZ());
+                matrixStackIn.pushPose();
+                matrixStackIn.translate(0.0D, 0.0D, 0.125D);
+                double d0 = MathHelper.lerp(partialTicks, player.xCloakO, player.xCloak) - MathHelper.lerp(partialTicks, player.xo, player.getX());
+                double d1 = MathHelper.lerp(partialTicks, player.yCloakO, player.yCloak) - MathHelper.lerp(partialTicks, player.yo, player.getY());
+                double d2 = MathHelper.lerp(partialTicks, player.zCloakO, player.zCloak) - MathHelper.lerp(partialTicks, player.zo, player.getZ());
                 float f = player.yBodyRotO + (player.yBodyRot - player.yBodyRotO);
                 double d3 = MathHelper.sin(f * ((float)Math.PI / 180F));
                 double d4 = -MathHelper.cos(f * ((float)Math.PI / 180F));
@@ -51,18 +51,18 @@ public class ModCapeLayer extends CapeLayer {
                     f2 = 0.0F;
                 }
 
-                float f4 = MathHelper.lerp(p_225628_7_, player.oBob, player.bob);
-                f1 = f1 + MathHelper.sin(MathHelper.lerp(p_225628_7_, player.walkDistO, player.walkDist) * 6.0F) * 32.0F * f4;
+                float f4 = MathHelper.lerp(partialTicks, player.oBob, player.bob);
+                f1 = f1 + MathHelper.sin(MathHelper.lerp(partialTicks, player.walkDistO, player.walkDist) * 6.0F) * 32.0F * f4;
                 if (player.isCrouching()) {
                     f1 += 25.0F;
                 }
 
-                p_225628_1_.mulPose(Vector3f.XP.rotationDegrees(6.0F + f2 / 2.0F + f1));
-                p_225628_1_.mulPose(Vector3f.ZP.rotationDegrees(f3 / 2.0F));
-                p_225628_1_.mulPose(Vector3f.YP.rotationDegrees(180.0F - f3 / 2.0F));
-                IVertexBuilder ivertexbuilder = p_225628_2_.getBuffer(RenderType.entitySolid(capeLocation));
-                this.getParentModel().renderCloak(p_225628_1_, ivertexbuilder, p_225628_3_, OverlayTexture.NO_OVERLAY);
-                p_225628_1_.popPose();
+                matrixStackIn.mulPose(Vector3f.XP.rotationDegrees(6.0F + f2 / 2.0F + f1));
+                matrixStackIn.mulPose(Vector3f.ZP.rotationDegrees(f3 / 2.0F));
+                matrixStackIn.mulPose(Vector3f.YP.rotationDegrees(180.0F - f3 / 2.0F));
+                IVertexBuilder ivertexbuilder = bufferIn.getBuffer(RenderType.entitySolid(capeLocation));
+                this.getParentModel().renderCloak(matrixStackIn, ivertexbuilder, packedLightIn, OverlayTexture.NO_OVERLAY);
+                matrixStackIn.popPose();
             }
         }
     }

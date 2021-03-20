@@ -67,15 +67,4 @@ public class ExampleModBlockStatesProvider extends BlockStateProvider {
 
         this.simpleBlockItem(ModBlocks.OBSIDIANITE_CRATE.get(), builder);
     }
-
-    /*
-    public BlockModelBuilder templateExtender(Block block, Map<String, ResourceLocation> textures) {
-        ResourceLocation name = block.getRegistryName();
-        assert name != null;
-        BlockModelBuilder builder = this.models().withExistingParent(name.getPath(), new ResourceLocation(name.getNamespace(), ModelProvider.BLOCK_FOLDER + "/template_" + name.getPath()));
-        textures.forEach(builder::texture);
-        return builder;
-    }
-
-     */
 }

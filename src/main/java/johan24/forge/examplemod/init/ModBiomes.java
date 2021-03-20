@@ -51,7 +51,7 @@ public class ModBiomes {
     }
 
     public static class Utils {
-        private static final Method GET_SKY_COLOR_WITH_TEMPERATURE_MODIFIER = ObfuscationReflectionHelper.findMethod(BiomeMaker.class, "func_244206_a", float.class);
+        private static final Method CALCULATE_SKY_COLOR = ObfuscationReflectionHelper.findMethod(BiomeMaker.class, "calculateSkyColor", float.class);
 
         public static Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder(final RegistryKey<ConfiguredSurfaceBuilder<?>> key) {
             return () -> WorldGenRegistries.CONFIGURED_SURFACE_BUILDER.getOrThrow(key);
@@ -96,7 +96,7 @@ public class ModBiomes {
 
             final int skyColour;
             try {
-                skyColour = (int) GET_SKY_COLOR_WITH_TEMPERATURE_MODIFIER.invoke(null, 2);
+                skyColour = (int) CALCULATE_SKY_COLOR.invoke(null, 2);
             } catch (final IllegalAccessException | InvocationTargetException e) {
                 throw new RuntimeException("Unable to get sky colour", e);
             }

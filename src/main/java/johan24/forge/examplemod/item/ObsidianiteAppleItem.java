@@ -26,11 +26,11 @@ public class ObsidianiteAppleItem extends Item {
 
     /**
      * Adds a glint to the Item.
-     * @param p_77616_1_ - ItemStack
+     * @param stack - ItemStack
      * @return - boolean
      */
     @Override
-    public boolean isEnchantable(ItemStack p_77616_1_) {
+    public boolean isFoil(ItemStack stack) {
         return true;
     }
 }
