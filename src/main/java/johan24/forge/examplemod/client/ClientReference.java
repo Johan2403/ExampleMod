@@ -5,8 +5,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
 /**
- * This is where client-side events are registered
- * and fired.
+ * This is where client-side events are registered.
  *
  * @author Johan24
  */

@@ -4,8 +4,7 @@ import johan24.forge.examplemod.util.ISidedReference;
 import net.minecraftforge.eventbus.api.IEventBus;
 
 /**
- * This is where server-side events are registered
- * and fired.
+ * This is where server-side events are registered.
  *
  * @author Johan24
  */
