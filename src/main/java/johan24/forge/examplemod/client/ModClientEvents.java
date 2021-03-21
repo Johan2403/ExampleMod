@@ -34,7 +34,7 @@ public class ModClientEvents {
     @SubscribeEvent
     public static void hitNotification(AttackEntityEvent event) {
         if(ExampleModConfig.CLIENT.enableHitNotification.get()) {
-            if(event.getTarget().isAlive()) {
+            if(event.getTarget().isAlive() && event.getTarget() instanceof LivingEntity) {
                 LivingEntity entity = (LivingEntity) event.getTarget();
                 PlayerEntity player = event.getPlayer();
                 World world = player.getCommandSenderWorld();

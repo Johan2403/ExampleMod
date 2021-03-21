@@ -56,7 +56,7 @@ public class ExampleModLanguageProvider extends LanguageProvider {
         add("examplemod.container.obsidianite_crate", "Obsidianite Crate");
 
         // Config
-        add("examplemod.config.common.spawnZombieKnights", "Spawn Zombie Knights");
+        add("examplemod.config.server.spawnZombieKnights", "Spawn Zombie Knights");
         add("examplemod.config.client.enableHitNotification", "Enable Hit Notification");
         add("examplemod.config.client.disableSmithing", "Disable Smithing");
     }

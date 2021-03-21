@@ -16,20 +16,18 @@ import org.apache.commons.lang3.tuple.Pair;
 public class ExampleModConfig {
     public static final ForgeConfigSpec CLIENT_SPEC;
     public static final Client CLIENT;
-
-    static {
-        final Pair<Client, ForgeConfigSpec> specPair = new ForgeConfigSpec.Builder().configure(Client::new);
-        CLIENT_SPEC = specPair.getRight();
-        CLIENT = specPair.getLeft();
-    }
-
     public static final ForgeConfigSpec SERVER_SPEC;
     public static final Server SERVER;
 
     static {
-        final Pair<Server, ForgeConfigSpec> specPair = new ForgeConfigSpec.Builder().configure(Server::new);
-        SERVER_SPEC = specPair.getRight();
-        SERVER = specPair.getLeft();
+        final Pair<Client, ForgeConfigSpec> client = new ForgeConfigSpec.Builder().configure(Client::new);
+        final Pair<Server, ForgeConfigSpec> server = new ForgeConfigSpec.Builder().configure(Server::new);
+
+        CLIENT_SPEC = client.getRight();
+        CLIENT = client.getLeft();
+
+        SERVER_SPEC = server.getRight();
+        SERVER = server.getLeft();
     }
 
     /**
@@ -62,11 +60,11 @@ public class ExampleModConfig {
         public final ForgeConfigSpec.BooleanValue spawnZombieKnight;
 
         Server(final ForgeConfigSpec.Builder builder) {
-            builder.comment("Common config settings")
-                    .push("common");
+            builder.comment("Server config settings")
+                    .push("server");
 
             spawnZombieKnight = builder.comment("Set to true if you want to spawn zombie knights.")
-                    .translation("examplemod.config.common.spawnZombieKnights")
+                    .translation("examplemod.config.server.spawnZombieKnights")
                     .worldRestart()
                     .define("spawnZombieKnights", true);
 
