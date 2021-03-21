@@ -54,8 +54,8 @@ public class ExampleMod {
         ModTileEntities.TILES.register(modEventBus);
         ModBiomes.BIOMES.register(modEventBus);
 
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ExampleModConfig.commonSpec);
-        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, ExampleModConfig.clientSpec);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, ExampleModConfig.CLIENT_SPEC);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, ExampleModConfig.SERVER_SPEC);
     }
 
     /**

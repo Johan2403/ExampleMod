@@ -14,41 +14,22 @@ import org.apache.commons.lang3.tuple.Pair;
  */
 @Mod.EventBusSubscriber(modid = ExampleMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ExampleModConfig {
-    public static final ForgeConfigSpec commonSpec;
-    public static final Common COMMON;
-
-    static {
-        final Pair<Common, ForgeConfigSpec> specPair = new ForgeConfigSpec.Builder().configure(Common::new);
-        commonSpec = specPair.getRight();
-        COMMON = specPair.getLeft();
-    }
-
-    public static final ForgeConfigSpec clientSpec;
+    public static final ForgeConfigSpec CLIENT_SPEC;
     public static final Client CLIENT;
 
     static {
         final Pair<Client, ForgeConfigSpec> specPair = new ForgeConfigSpec.Builder().configure(Client::new);
-        clientSpec = specPair.getRight();
+        CLIENT_SPEC = specPair.getRight();
         CLIENT = specPair.getLeft();
     }
 
-    /**
-     * Contains Common Settings.
-     */
-    public static class Common {
-        public final ForgeConfigSpec.BooleanValue spawnZombieKnight;
+    public static final ForgeConfigSpec SERVER_SPEC;
+    public static final Server SERVER;
 
-        Common(final ForgeConfigSpec.Builder builder) {
-            builder.comment("Common config settings")
-                   .push("common");
-
-            spawnZombieKnight = builder.comment("Set to true if you want to spawn zombie knights.")
-                                       .translation("examplemod.config.common.spawnZombieKnights")
-                                       .worldRestart()
-                                       .define("spawnZombieKnights", true);
-
-            builder.pop();
-        }
+    static {
+        final Pair<Server, ForgeConfigSpec> specPair = new ForgeConfigSpec.Builder().configure(Server::new);
+        SERVER_SPEC = specPair.getRight();
+        SERVER = specPair.getLeft();
     }
 
     /**
@@ -69,6 +50,25 @@ public class ExampleModConfig {
             disableSmithing = builder.comment("Set to true if you want to disable smithing.")
                                      .translation("examplemod.config.client.disableSmithing")
                                      .define("disableSmithing", false);
+
+            builder.pop();
+        }
+    }
+
+    /**
+     * Contains Server Settings.
+     */
+    public static class Server {
+        public final ForgeConfigSpec.BooleanValue spawnZombieKnight;
+
+        Server(final ForgeConfigSpec.Builder builder) {
+            builder.comment("Common config settings")
+                    .push("common");
+
+            spawnZombieKnight = builder.comment("Set to true if you want to spawn zombie knights.")
+                    .translation("examplemod.config.common.spawnZombieKnights")
+                    .worldRestart()
+                    .define("spawnZombieKnights", true);
 
             builder.pop();
         }

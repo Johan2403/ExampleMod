@@ -25,7 +25,7 @@ public class ModEvents {
      */
     @SubscribeEvent
     public static void zombieKnights(EntityJoinWorldEvent event) {
-        if(ExampleModConfig.COMMON.spawnZombieKnight.get()) {
+        if(ExampleModConfig.SERVER.spawnZombieKnight.get()) {
             if(!event.getWorld().isClientSide()) {
                 if(!(event.getEntity() instanceof ZombieEntity))
                     return;
