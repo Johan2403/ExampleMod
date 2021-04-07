@@ -133,3 +133,24 @@ test {
         events "passed", "skipped", "failed"
     }
 }
+
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/johan2403/examplemod")
+            credentials {
+                username = "johan2403"
+                password = System.getenv("TOKEN")
+            }
+        }
+    }
+
+    publications {
+        gpr(MavenPublication) {
+            groupId = "johan24.mods.examplemod"
+            artifactId = "examplemod"
+            artifact jar
+        }
+    }
+}
