@@ -1,6 +1,6 @@
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
-package johan24.forge.examplemod.block;
+package johan24.mods.examplemod.block;
 
 import mcp.MethodsReturnNonnullByDefault;
 

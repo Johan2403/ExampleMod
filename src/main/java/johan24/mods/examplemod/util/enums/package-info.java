@@ -1,4 +1,4 @@
 @MethodsReturnNonnullByDefault
-package johan24.forge.examplemod.util.enums;
+package johan24.mods.examplemod.util.enums;
 
 import mcp.MethodsReturnNonnullByDefault;

@@ -1,7 +1,7 @@
-package johan24.forge.examplemod.util.enums;
+package johan24.mods.examplemod.util.enums;
 
-import johan24.forge.examplemod.ExampleMod;
-import johan24.forge.examplemod.init.ModItems;
+import johan24.mods.examplemod.ExampleMod;
+import johan24.mods.examplemod.init.ModItems;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.crafting.Ingredient;

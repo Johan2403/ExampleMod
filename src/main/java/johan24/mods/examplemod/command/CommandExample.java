@@ -1,4 +1,4 @@
-package johan24.forge.examplemod.command;
+package johan24.mods.examplemod.command;
 
 import com.mojang.brigadier.Command;
 import com.mojang.brigadier.builder.ArgumentBuilder;

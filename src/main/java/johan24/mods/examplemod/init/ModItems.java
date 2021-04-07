@@ -1,9 +1,9 @@
-package johan24.forge.examplemod.init;
+package johan24.mods.examplemod.init;
 
-import johan24.forge.examplemod.item.ObsidianiteAppleItem;
-import johan24.forge.examplemod.util.enums.ModArmorMaterial;
-import johan24.forge.examplemod.util.enums.ModItemTier;
-import johan24.forge.examplemod.ExampleMod;
+import johan24.mods.examplemod.item.ObsidianiteAppleItem;
+import johan24.mods.examplemod.util.enums.ModArmorMaterial;
+import johan24.mods.examplemod.util.enums.ModItemTier;
+import johan24.mods.examplemod.ExampleMod;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;

@@ -1,15 +1,13 @@
-package johan24.forge.examplemod.client;
+package johan24.mods.examplemod.client;
 
-import johan24.forge.examplemod.ExampleMod;
-import johan24.forge.examplemod.client.renderer.entity.layers.ModCapeLayer;
-import johan24.forge.examplemod.config.ExampleModConfig;
-import net.minecraft.client.Minecraft;
+import johan24.mods.examplemod.ExampleMod;
+import johan24.mods.examplemod.client.renderer.entity.layers.ModCapeLayer;
+import johan24.mods.examplemod.config.ExampleModConfig;
 import net.minecraft.client.entity.player.AbstractClientPlayerEntity;
 import net.minecraft.client.gui.screen.inventory.SmithingTableScreen;
 import net.minecraft.client.renderer.entity.PlayerRenderer;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.util.Hand;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;

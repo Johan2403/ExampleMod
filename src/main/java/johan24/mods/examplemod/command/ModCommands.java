@@ -1,8 +1,8 @@
-package johan24.forge.examplemod.command;
+package johan24.mods.examplemod.command;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.tree.LiteralCommandNode;
-import johan24.forge.examplemod.ExampleMod;
+import johan24.mods.examplemod.ExampleMod;
 import net.minecraft.command.CommandSource;
 import net.minecraft.command.Commands;
 import net.minecraft.util.text.StringTextComponent;

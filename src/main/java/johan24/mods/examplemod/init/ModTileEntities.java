@@ -1,7 +1,7 @@
-package johan24.forge.examplemod.init;
+package johan24.mods.examplemod.init;
 
-import johan24.forge.examplemod.ExampleMod;
-import johan24.forge.examplemod.tileentity.ObsidianiteCrateTileEntity;
+import johan24.mods.examplemod.ExampleMod;
+import johan24.mods.examplemod.tileentity.ObsidianiteCrateTileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;

@@ -1,8 +1,8 @@
-package johan24.forge.examplemod.data;
+package johan24.mods.examplemod.data;
 
-import johan24.forge.examplemod.init.ModBlocks;
-import johan24.forge.examplemod.tags.ExampleTags;
-import johan24.forge.examplemod.ExampleMod;
+import johan24.mods.examplemod.init.ModBlocks;
+import johan24.mods.examplemod.tags.ExampleTags;
+import johan24.mods.examplemod.ExampleMod;
 import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.Tags;

@@ -1,4 +1,4 @@
 @ParametersAreNonnullByDefault
-package johan24.forge.examplemod.item;
+package johan24.mods.examplemod.item;
 
 import javax.annotation.ParametersAreNonnullByDefault;

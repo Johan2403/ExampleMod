@@ -1,6 +1,6 @@
-package johan24.forge.examplemod.init;
+package johan24.mods.examplemod.init;
 
-import johan24.forge.examplemod.ExampleMod;
+import johan24.mods.examplemod.ExampleMod;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.*;

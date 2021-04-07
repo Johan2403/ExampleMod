@@ -1,6 +1,6 @@
-package johan24.forge.examplemod.item;
+package johan24.mods.examplemod.item;
 
-import johan24.forge.examplemod.ExampleMod;
+import johan24.mods.examplemod.ExampleMod;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

@@ -1,6 +1,6 @@
-package johan24.forge.examplemod.client;
+package johan24.mods.examplemod.client;
 
-import johan24.forge.examplemod.util.ISidedReference;
+import johan24.mods.examplemod.util.ISidedReference;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 

@@ -1,6 +1,6 @@
-package johan24.forge.examplemod.config;
+package johan24.mods.examplemod.config;
 
-import johan24.forge.examplemod.ExampleMod;
+import johan24.mods.examplemod.ExampleMod;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;

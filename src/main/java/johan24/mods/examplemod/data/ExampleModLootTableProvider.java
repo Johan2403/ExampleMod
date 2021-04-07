@@ -1,10 +1,10 @@
-package johan24.forge.examplemod.data;
+package johan24.mods.examplemod.data;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Sets;
 import com.mojang.datafixers.util.Pair;
-import johan24.forge.examplemod.data.loot.ExampleModBlockLootTables;
-import johan24.forge.examplemod.ExampleMod;
+import johan24.mods.examplemod.data.loot.ExampleModBlockLootTables;
+import johan24.mods.examplemod.ExampleMod;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.LootTableProvider;
 import net.minecraft.loot.*;

@@ -1,7 +1,7 @@
-package johan24.forge.examplemod.init;
+package johan24.mods.examplemod.init;
 
-import johan24.forge.examplemod.ExampleMod;
-import johan24.forge.examplemod.block.ObsidianiteCrateBlock;
+import johan24.mods.examplemod.ExampleMod;
+import johan24.mods.examplemod.block.ObsidianiteCrateBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;

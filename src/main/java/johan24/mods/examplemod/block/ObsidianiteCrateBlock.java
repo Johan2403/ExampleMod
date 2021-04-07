@@ -1,6 +1,6 @@
-package johan24.forge.examplemod.block;
+package johan24.mods.examplemod.block;
 
-import johan24.forge.examplemod.tileentity.ObsidianiteCrateTileEntity;
+import johan24.mods.examplemod.tileentity.ObsidianiteCrateTileEntity;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.LivingEntity;

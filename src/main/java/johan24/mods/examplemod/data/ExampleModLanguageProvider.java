@@ -1,8 +1,8 @@
-package johan24.forge.examplemod.data;
+package johan24.mods.examplemod.data;
 
-import johan24.forge.examplemod.init.ModBlocks;
-import johan24.forge.examplemod.init.ModItems;
-import johan24.forge.examplemod.ExampleMod;
+import johan24.mods.examplemod.init.ModBlocks;
+import johan24.mods.examplemod.init.ModItems;
+import johan24.mods.examplemod.ExampleMod;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
 

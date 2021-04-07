@@ -1,7 +1,7 @@
-package johan24.forge.examplemod.data.loot;
+package johan24.mods.examplemod.data.loot;
 
-import johan24.forge.examplemod.init.ModBlocks;
-import johan24.forge.examplemod.init.ModItems;
+import johan24.mods.examplemod.init.ModBlocks;
+import johan24.mods.examplemod.init.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.data.loot.BlockLootTables;
 import net.minecraftforge.fml.RegistryObject;
