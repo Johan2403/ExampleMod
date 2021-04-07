@@ -78,8 +78,8 @@ repositories {
     }
 
     maven {
-        name 'tterrag maven'
-        url "https://maven.tterrag.com/"
+        name = 'tterrag maven'
+        url = "https://maven.tterrag.com/"
     }
 }
 
