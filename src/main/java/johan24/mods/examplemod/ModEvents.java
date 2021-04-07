@@ -1,7 +1,7 @@
-package johan24.forge.examplemod;
+package johan24.mods.examplemod;
 
-import johan24.forge.examplemod.command.ModCommands;
-import johan24.forge.examplemod.config.ExampleModConfig;
+import johan24.mods.examplemod.command.ModCommands;
+import johan24.mods.examplemod.config.ExampleModConfig;
 import net.minecraft.entity.monster.ZombieEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;

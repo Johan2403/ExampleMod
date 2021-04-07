@@ -1,6 +1,6 @@
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
-package johan24.forge.examplemod.tileentity;
+package johan24.mods.examplemod.tileentity;
 
 import mcp.MethodsReturnNonnullByDefault;
 

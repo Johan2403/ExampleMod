@@ -1,14 +1,15 @@
-package johan24.forge.examplemod;
+package johan24.mods.examplemod;
 
-import johan24.forge.examplemod.client.ClientReference;
-import johan24.forge.examplemod.config.ExampleModConfig;
+import johan24.mods.examplemod.client.ClientReference;
+import johan24.mods.examplemod.config.ExampleModConfig;
 import johan24.forge.examplemod.data.*;
-import johan24.forge.examplemod.init.ModBiomes;
-import johan24.forge.examplemod.init.ModBlocks;
-import johan24.forge.examplemod.init.ModItems;
-import johan24.forge.examplemod.init.ModTileEntities;
-import johan24.forge.examplemod.server.dedicated.DedicatedServerReference;
-import johan24.forge.examplemod.util.ISidedReference;
+import johan24.mods.examplemod.init.ModBiomes;
+import johan24.mods.examplemod.init.ModBlocks;
+import johan24.mods.examplemod.init.ModItems;
+import johan24.mods.examplemod.init.ModTileEntities;
+import johan24.mods.examplemod.server.dedicated.DedicatedServerReference;
+import johan24.mods.examplemod.util.ISidedReference;
+import johan24.mods.examplemod.data.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;

@@ -1,4 +1,4 @@
-package johan24.forge.examplemod.util;
+package johan24.mods.examplemod.util;
 
 import net.minecraftforge.eventbus.api.IEventBus;
 

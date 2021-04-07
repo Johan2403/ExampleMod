@@ -1,6 +1,6 @@
-package johan24.forge.examplemod.server.dedicated;
+package johan24.mods.examplemod.server.dedicated;
 
-import johan24.forge.examplemod.util.ISidedReference;
+import johan24.mods.examplemod.util.ISidedReference;
 import net.minecraftforge.eventbus.api.IEventBus;
 
 /**

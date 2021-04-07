@@ -1,6 +1,6 @@
-package johan24.forge.examplemod.tileentity;
+package johan24.mods.examplemod.tileentity;
 
-import johan24.forge.examplemod.init.ModTileEntities;
+import johan24.mods.examplemod.init.ModTileEntities;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.ItemStackHelper;

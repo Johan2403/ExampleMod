@@ -1,4 +1,4 @@
-package johan24.forge.examplemod.tags;
+package johan24.mods.examplemod.tags;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;

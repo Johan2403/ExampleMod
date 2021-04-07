@@ -1,6 +1,6 @@
-package johan24.forge.examplemod.server.dedicated;
+package johan24.mods.examplemod.server.dedicated;
 
-import johan24.forge.examplemod.ExampleMod;
+import johan24.mods.examplemod.ExampleMod;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
